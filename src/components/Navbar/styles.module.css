@@ -1,0 +1,91 @@
+.navbarContainer {
+  width: 25vw;
+  height: 100vh;
+  min-width: 200px;
+  padding: 0 2rem;
+  border-right: 1px solid black;
+}
+
+.personContainer {
+  height: 20%;
+  text-align: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 9rem;
+}
+
+.name {
+  font-weight: bold;
+  margin-top: -2rem;
+}
+
+.title {
+  color: darkgrey;
+  font-size: 0.7rem;
+}
+
+.linkContainer {
+  height: 65%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.linkContainer a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  position: relative;
+}
+
+.linkContainer a:before {
+  content: ">>";
+  position: absolute;
+  left: -15px;
+  font-weight: bold;
+  letter-spacing: -4px;
+  display: none;
+}
+
+.linkContainer a:hover {
+  left: 20px;
+}
+
+.linkContainer a:hover::before {
+  display: block;
+}
+
+.linkContainer li {
+  padding-top: 0.3rem;
+  list-style: none;
+}
+/* .linkContainer a:hover::before {
+  animation: move 1s infinite ease-in-out;
+}
+
+.linkContainer a::before {
+  content: ">>";
+  position: absolute;
+  right: -20px;
+  font-weight: bold;
+  letter-spacing: -4px;
+  animation: none;
+  transform-origin: 10px 12px;
+}
+
+
+@keyframes move {
+  0% {
+    transform: rotateX(0deg) translateX(0);
+  }
+
+  50% {
+    transform: rotateX(360deg) translateX(10px);
+  }
+
+  100% {
+    transform: rotateX(0deg) translateX(0px);
+  }
+} */

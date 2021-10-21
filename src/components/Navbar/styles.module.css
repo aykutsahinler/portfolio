@@ -1,9 +1,11 @@
 .navbarContainer {
-  width: 25vw;
+  width: 300px;
   height: 100vh;
   min-width: 200px;
   padding: 0 2rem;
   border-right: 1px solid black;
+  position: fixed;
+  z-index: 5;
 }
 
 .personContainer {
@@ -38,12 +40,14 @@
   color: black;
   font-weight: bold;
   position: relative;
+  font-size: 1.5rem;
+  margin-left: -2rem;
 }
 
 .linkContainer a:before {
   content: ">>";
   position: absolute;
-  left: -15px;
+  left: -2rem;
   font-weight: bold;
   letter-spacing: -4px;
   display: none;
@@ -61,31 +65,32 @@
   padding-top: 0.3rem;
   list-style: none;
 }
-/* .linkContainer a:hover::before {
-  animation: move 1s infinite ease-in-out;
+
+.open {
+  display: none;
+  z-index: 6;
 }
 
-.linkContainer a::before {
-  content: ">>";
-  position: absolute;
-  right: -20px;
-  font-weight: bold;
-  letter-spacing: -4px;
-  animation: none;
-  transform-origin: 10px 12px;
+@media screen and (max-width: 1400px) {
+  .navbarContainer {
+    width: 200px;
+  }
 }
 
-
-@keyframes move {
-  0% {
-    transform: rotateX(0deg) translateX(0);
+@media screen and (max-width: 700px) {
+  .navbarContainer {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: gray;
   }
 
-  50% {
-    transform: rotateX(360deg) translateX(10px);
+  .open {
+    font-size: 2rem;
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    cursor: pointer;
+    display: block;
   }
-
-  100% {
-    transform: rotateX(0deg) translateX(0px);
-  }
-} */
+}

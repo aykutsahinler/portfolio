@@ -1,0 +1,117 @@
+h3 {
+  text-align: center;
+}
+
+.resumeContainer {
+  display: flex;
+  width: calc(100% - 300px);
+  margin-left: 300px;
+}
+
+.column {
+  width: 25%;
+  border-right: 1px solid darkgrey;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 2.5rem 2rem 2rem 2rem;
+  min-width: 230px;
+}
+
+.titleContainer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.experienceContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+.column:last-child .experienceContainer {
+  width: 70%;
+  align-self: center;
+}
+
+.experienceContainer h5 {
+  padding-bottom: 0.3rem;
+}
+
+.experienceContainer ul {
+  width: 100%;
+}
+
+.experienceContainer ul li {
+  list-style: none;
+  font-size: 0.8rem;
+  color: grey;
+}
+
+.skills {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.interest {
+  padding-top: 1rem;
+}
+
+.plus {
+  display: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .resumeContainer {
+    flex-wrap: wrap;
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+
+  .column {
+    width: 50%;
+    border-bottom: 1px solid black;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .resumeContainer {
+    flex-wrap: wrap;
+  }
+
+  .column {
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .resumeContainer {
+    margin-left: 0;
+    align-self: center;
+    width: 100%;
+    border: none;
+  }
+
+  .column {
+    width: 100%;
+    border-left: none;
+  }
+
+  .plus {
+    display: block;
+    align-self: center;
+    font-weight: bold;
+    font-size: 1.7rem;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+}

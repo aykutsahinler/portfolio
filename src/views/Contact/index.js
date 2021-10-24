@@ -9,6 +9,7 @@ function Contact() {
 
       <a
         target="_blank"
+        rel="noreferrer"
         href="https://www.linkedin.com/in/kubilay-%C5%9Fahinler-092bb6a3/"
         className={styles.fa}
       >
@@ -17,6 +18,7 @@ function Contact() {
 
       <a
         target="_blank"
+        rel="noreferrer"
         href="mailto:kubilay.sahinler@gmail.com"
         className={styles.fa}
       >

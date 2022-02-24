@@ -1,9 +1,8 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
 import "./styles.css";
 
-function Slider() {
+const Slider = () => {
   return (
     <div className="slider-container">
       <Carousel showThumbs={false} autoPlay>
@@ -16,6 +15,6 @@ function Slider() {
       </Carousel>
     </div>
   );
-}
+};
 
 export default Slider;

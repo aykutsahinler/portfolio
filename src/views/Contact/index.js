@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import "font-awesome/css/font-awesome.min.css";
 
-function Contact() {
+const Contact = () => {
   return (
     <div className={styles.container}>
       <h1>Kubilay Şahinler</h1>
@@ -26,6 +26,6 @@ function Contact() {
       </a>
     </div>
   );
-}
+};
 
 export default Contact;

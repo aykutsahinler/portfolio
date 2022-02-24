@@ -1,15 +1,10 @@
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
-import Resume from "../../views/Resume";
-import Projects from "../../views/Projects";
-import Contact from "../../views/Contact";
-
 import styles from "./styles.module.css";
-
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-function Navbar() {
+const Navbar = () => {
   const [isOpen, setIsopen] = useState(false);
+  const navigate = useNavigate();
 
   const openBurger = () => {
     setIsopen(!isOpen);
@@ -22,7 +17,7 @@ function Navbar() {
   };
 
   return (
-    <Router>
+    <>
       <div id="navbar" className={styles.navbarContainer}>
         <div className={styles.personContainer}>
           <p className={styles.logo}>ks</p>
@@ -31,15 +26,9 @@ function Navbar() {
         </div>
         <nav className={styles.linkContainer}>
           <ul>
-            <li>
-              <Link to="/resume">Resume</Link>
-            </li>
-            <li>
-              <Link to="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
+            <li onClick={() => navigate("/resume")}>Resume</li>
+            <li onClick={() => navigate("/projects")}>Projects</li>
+            <li onClick={() => navigate("/contact")}>Contact</li>
           </ul>
         </nav>
       </div>
@@ -56,33 +45,15 @@ function Navbar() {
           </div>
           <nav className={styles.linkContainer}>
             <ul>
-              <li>
-                <Link to="/resume">Resume</Link>
-              </li>
-              <li>
-                <Link to="/projects">Projects</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact</Link>
-              </li>
+              <li onClick={() => navigate("/resume")}>Resume</li>
+              <li onClick={() => navigate("/resume")}>Projects</li>
+              <li onClick={() => navigate("/resume")}>Contact</li>
             </ul>
           </nav>
         </div>
       )}
-
-      <Switch>
-        <Route path="/projects">
-          <Projects />
-        </Route>
-        <Route path="/resume">
-          <Resume />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-      </Switch>
-    </Router>
+    </>
   );
-}
+};
 
 export default Navbar;

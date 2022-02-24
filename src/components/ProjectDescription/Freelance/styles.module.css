@@ -1,9 +1,10 @@
 .mainContainer {
   display: flex;
+  width: calc(100vw - 550px);
 }
 
 .descriptionContainer {
-  width: 250px;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,8 +33,18 @@
   }
 }
 
+@media screen and (max-width: 1400px) {
+  .mainContainer {
+    width: calc(100vw - 500px);
+  }
+}
+
 @media screen and (max-width: 700px) {
   .descriptionContainer {
     padding: 0.5rem;
+  }
+
+  .mainContainer {
+    width: 100%
   }
 }

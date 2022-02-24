@@ -6,6 +6,7 @@
   border-right: 1px solid black;
   position: fixed;
   z-index: 5;
+  background-color: #f0f0f0;
 }
 
 .personContainer {
@@ -35,16 +36,7 @@
   justify-content: center;
 }
 
-.linkContainer a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-  position: relative;
-  font-size: 1.5rem;
-  margin-left: -2rem;
-}
-
-.linkContainer a:before {
+.linkContainer li:before {
   content: ">>";
   position: absolute;
   left: -2rem;
@@ -53,17 +45,24 @@
   display: none;
 }
 
-.linkContainer a:hover {
+.linkContainer li:hover {
   left: 20px;
 }
 
-.linkContainer a:hover::before {
+.linkContainer li:hover::before {
   display: block;
 }
 
 .linkContainer li {
   padding-top: 0.3rem;
   list-style: none;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  position: relative;
+  font-size: 1.5rem;
+  margin-left: -2rem;
+  cursor: pointer;
 }
 
 .open {

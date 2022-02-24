@@ -9,9 +9,15 @@ import Contact from "./views/Contact";
 import Projects from "./views/Projects";
 
 import "./App.css";
+import Error from "./views/Error";
 
 const App = () => {
   let routes = useRoutes([
+    {
+      key: "Error",
+      element: <Error />,
+      path: "*",
+    },
     {
       element: <Home />,
       path: "/",

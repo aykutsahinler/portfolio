@@ -3,40 +3,40 @@ h3 {
 }
 
 .resumeContainer {
-  display: flex;
-  width: calc(100% - 300px);
+  display    : flex;
+  width      : calc(100% - 300px);
   margin-left: 300px;
 }
 
 .column {
-  width: 25%;
-  border-right: 1px solid darkgrey;
-  display: flex;
-  align-items: center;
+  width         : 25%;
+  border-right  : 1px solid darkgrey;
+  display       : flex;
+  align-items   : center;
   flex-direction: column;
-  padding: 2.5rem 2rem 2rem 2rem;
-  min-width: 230px;
+  padding       : 2.5rem 2rem 2rem 2rem;
+  min-width     : 230px;
 }
 
 .titleContainer {
-  width: 100%;
-  display: flex;
+  width         : 100%;
+  display       : flex;
   flex-direction: column;
-  padding-top: 1rem;
+  padding-top   : 1rem;
 }
 
 .experienceContainer {
-  display: flex;
-  align-items: center;
+  display        : flex;
+  align-items    : center;
   justify-content: center;
-  flex-direction: column;
-  padding-top: 1rem;
-  text-align: center;
-  width: 100%;
+  flex-direction : column;
+  padding-top    : 1rem;
+  text-align     : center;
+  width          : 100%;
 }
 
 .column:last-child .experienceContainer {
-  width: 70%;
+  width     : 70%;
   align-self: center;
 }
 
@@ -50,14 +50,14 @@ h3 {
 
 .experienceContainer ul li {
   list-style: none;
-  font-size: 0.8rem;
-  color: grey;
+  font-size : 0.8rem;
+  color     : grey;
 }
 
 .skills {
-  display: flex;
+  display        : flex;
   justify-content: space-between;
-  width: 100%;
+  width          : 100%;
 }
 
 .interest {
@@ -70,13 +70,13 @@ h3 {
 
 @media screen and (max-width: 1400px) {
   .resumeContainer {
-    flex-wrap: wrap;
+    flex-wrap  : wrap;
     margin-left: 200px;
-    width: calc(100% - 200px);
+    width      : calc(100% - 200px);
   }
 
   .column {
-    width: 50%;
+    width        : 50%;
     border-bottom: 1px solid black;
   }
 }
@@ -87,7 +87,7 @@ h3 {
   }
 
   .column {
-    width: 100%;
+    width        : 100%;
     border-bottom: 1px solid black;
   }
 }
@@ -95,23 +95,23 @@ h3 {
 @media screen and (max-width: 700px) {
   .resumeContainer {
     margin-left: 0;
-    align-self: center;
-    width: 100%;
-    border: none;
+    align-self : center;
+    width      : 100%;
+    border     : none;
   }
 
   .column {
-    width: 100%;
+    width      : 100%;
     border-left: none;
   }
 
   .plus {
-    display: block;
-    align-self: center;
-    font-weight: bold;
-    font-size: 1.7rem;
-    cursor: pointer;
+    display         : block;
+    align-self      : center;
+    font-weight     : bold;
+    font-size       : 1.7rem;
+    cursor          : pointer;
     background-color: transparent;
-    border: none;
+    border          : none;
   }
 }

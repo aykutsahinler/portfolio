@@ -1,17 +1,17 @@
 .container {
-  text-align: right;
-  height: 100vh;
-  width: 100%;
-  margin: 0;
-  color: #fff;
-  font-family: "Raleway", sans-serif;
-  font-size: 15px;
-  background: url(../../assets/3.jpg) center no-repeat;
-  filter: brightness(90%);
+  text-align     : right;
+  height         : 100vh;
+  width          : 100%;
+  margin         : 0;
+  color          : #fff;
+  font-family    : "Raleway", sans-serif;
+  font-size      : 15px;
+  background     : url(../../assets/3.jpg) center no-repeat;
+  filter         : brightness(90%);
   background-size: cover;
-  overflow: hidden;
-  padding-right: 50px;
-  margin-left: 300px;
+  overflow       : hidden;
+  padding-right  : 50px;
+  margin-left    : 300px;
 }
 
 a {
@@ -19,12 +19,12 @@ a {
 }
 
 h1 {
-  width: 100%;
-  margin: 40vh 0 3vh 0;
+  width      : 100%;
+  margin     : 40vh 0 3vh 0;
   font-family: "Raleway", sans-serif;
   font-weight: 100;
-  font-size: 3em;
-  transition: all 0.4s;
+  font-size  : 3em;
+  transition : all 0.4s;
 }
 
 h1:hover {
@@ -36,10 +36,10 @@ h1::selection {
 }
 
 i {
-  display: block;
-  width: 100%;
+  display      : block;
+  width        : 100%;
   margin-bottom: 4vh;
-  font-size: 1em;
+  font-size    : 1em;
 }
 
 i::selection {
@@ -47,25 +47,25 @@ i::selection {
 }
 
 .fa {
-  display: inline-block;
-  color: inherit;
-  border: 1px solid;
+  display        : inline-block;
+  color          : inherit;
+  border         : 1px solid;
   text-decoration: none;
-  padding-top: 10px;
-  width: 40px;
-  height: 40px;
-  text-align: center;
-  border-radius: 20%;
-  box-sizing: border-box;
-  margin-left: 1em;
-  background: rgba(0, 0, 0, 0);
-  transition: all 0.4s;
+  padding-top    : 10px;
+  width          : 40px;
+  height         : 40px;
+  text-align     : center;
+  border-radius  : 20%;
+  box-sizing     : border-box;
+  margin-left    : 1em;
+  background     : rgba(0, 0, 0, 0);
+  transition     : all 0.4s;
 }
 
 .fa:hover {
   /* color: rgb(162, 232, 255); */
-  color: black;
-  border-color: inherit;
+  color        : black;
+  border-color : inherit;
   /* background: rgba(0, 0, 0, 0.5); */
 }
 

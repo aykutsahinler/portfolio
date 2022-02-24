@@ -1,48 +1,48 @@
 .navbarContainer {
-  width: 300px;
-  height: 100vh;
-  min-width: 200px;
-  padding: 0 2rem;
-  border-right: 1px solid black;
-  position: fixed;
-  z-index: 5;
+  width           : 300px;
+  height          : 100vh;
+  min-width       : 200px;
+  padding         : 0 2rem;
+  border-right    : 1px solid black;
+  position        : fixed;
+  z-index         : 5;
   background-color: #f0f0f0;
 }
 
 .personContainer {
-  height: 20%;
+  height    : 20%;
   text-align: center;
 }
 
 .logo {
   font-weight: bold;
-  font-size: 9rem;
+  font-size  : 9rem;
 }
 
 .name {
   font-weight: bold;
-  margin-top: -2rem;
+  margin-top : -2rem;
 }
 
 .title {
-  color: darkgrey;
+  color    : darkgrey;
   font-size: 0.7rem;
 }
 
 .linkContainer {
-  height: 65%;
-  display: flex;
-  align-items: center;
+  height         : 65%;
+  display        : flex;
+  align-items    : center;
   justify-content: center;
 }
 
 .linkContainer li:before {
-  content: ">>";
-  position: absolute;
-  left: -2rem;
-  font-weight: bold;
+  content       : ">>";
+  position      : absolute;
+  left          : -2rem;
+  font-weight   : bold;
   letter-spacing: -4px;
-  display: none;
+  display       : none;
 }
 
 .linkContainer li:hover {
@@ -54,15 +54,15 @@
 }
 
 .linkContainer li {
-  padding-top: 0.3rem;
-  list-style: none;
+  padding-top    : 0.3rem;
+  list-style     : none;
   text-decoration: none;
-  color: black;
-  font-weight: bold;
-  position: relative;
-  font-size: 1.5rem;
-  margin-left: -2rem;
-  cursor: pointer;
+  color          : black;
+  font-weight    : bold;
+  position       : relative;
+  font-size      : 1.5rem;
+  margin-left    : -2rem;
+  cursor         : pointer;
 }
 
 .open {
@@ -78,18 +78,18 @@
 
 @media screen and (max-width: 700px) {
   .navbarContainer {
-    display: none;
-    width: 100%;
-    height: 100%;
+    display         : none;
+    width           : 100%;
+    height          : 100%;
     background-color: gray;
   }
 
   .open {
     font-size: 2rem;
-    position: fixed;
-    right: 1rem;
-    top: 1rem;
-    cursor: pointer;
-    display: block;
+    position : fixed;
+    right    : 1rem;
+    top      : 1rem;
+    cursor   : pointer;
+    display  : block;
   }
 }

@@ -42,6 +42,10 @@
   transition      : width .3s linear;
 }
 
+li:hover+.line {
+  width: 100px;
+}
+
 .active {
   width: 100px;
 }

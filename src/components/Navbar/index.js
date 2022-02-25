@@ -1,10 +1,11 @@
 import styles from "./styles.module.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsopen] = useState(false);
   const navigate = useNavigate();
+  const location = window.location.pathname;
 
   const openBurger = () => {
     setIsopen(!isOpen);
@@ -15,6 +16,8 @@ const Navbar = () => {
       el.style.display = "none";
     }
   };
+
+  useEffect(() => {}, [location]);
 
   return (
     <>
@@ -27,8 +30,29 @@ const Navbar = () => {
         <nav className={styles.linkContainer}>
           <ul>
             <li onClick={() => navigate("/resume")}>Resume</li>
+            <div
+              className={[
+                styles.line +
+                  " " +
+                  (location === "/resume" ? styles.active : []),
+              ].join("")}
+            ></div>
             <li onClick={() => navigate("/projects")}>Projects</li>
+            <div
+              className={[
+                styles.line +
+                  " " +
+                  (location === "/projects" ? styles.active : []),
+              ].join("")}
+            ></div>
             <li onClick={() => navigate("/contact")}>Contact</li>
+            <div
+              className={[
+                styles.line +
+                  " " +
+                  (location === "/contact" ? styles.active : []),
+              ].join("")}
+            ></div>
           </ul>
         </nav>
       </div>

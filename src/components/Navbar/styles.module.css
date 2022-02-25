@@ -36,38 +36,37 @@
   justify-content: center;
 }
 
-.linkContainer li:before {
-  content       : ">>";
-  position      : absolute;
-  left          : -2rem;
-  font-weight   : bold;
-  letter-spacing: -4px;
-  display       : none;
-}
-
-.linkContainer li:hover {
-  left: 20px;
-}
-
-.linkContainer li:hover::before {
-  display: block;
-}
-
 .linkContainer li {
-  padding-top    : 0.3rem;
-  list-style     : none;
-  text-decoration: none;
-  color          : black;
-  font-weight    : bold;
-  position       : relative;
-  font-size      : 1.5rem;
-  margin-left    : -2rem;
-  cursor         : pointer;
+  padding-top: 0.3rem;
+  list-style : none;
+  color      : black;
+  font-weight: bold;
+  position   : relative;
+  font-size  : 1.5rem;
+  margin-left: -2rem;
+  cursor     : pointer;
+  transition : margin-left .5s linear;
 }
 
 .open {
   display: none;
   z-index: 6;
+}
+
+.active {
+  width: 100% !important;
+}
+
+.line {
+  width           : 50%;
+  margin          : .5em 0 .2em 0;
+  height          : 1px;
+  background-color: #000;
+  transition      : width .3s linear;
+}
+
+li:hover+.line {
+  width: 100%;
 }
 
 @media screen and (max-width: 1400px) {

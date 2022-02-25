@@ -3,12 +3,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
-const Slider = ({ images, setDetail }) => {
+const Slider = ({ images, detail, setDetail, setShow }) => {
   const navigate = useNavigate();
 
   const onClickImage = (url) => {
     navigate(url);
     setDetail(true);
+    setShow(false);
   };
 
   return (

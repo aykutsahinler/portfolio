@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useOutletContext } from "react-router-dom";
 import { image4, image5, image6 } from "../../../assets/index";
 import Slider from "../../ProjectSlider";
 import styles from "./styles.module.css";
 
 const Student = () => {
   const [detail, setDetail] = useState(false);
+  const [, setShow] = useOutletContext();
 
   const location = window.location.pathname;
 
@@ -39,18 +40,23 @@ const Student = () => {
   ];
 
   return (
-    <div className={styles.mainContainer}>
+    <>
       {!detail && (
-        <>
+        <div className={styles.mainContainer}>
           <div className={styles.descriptionContainer}>
             <p>{dataSource.title}</p>
             <p>{dataSource.desc}</p>
           </div>
-          <Slider images={images} setDetail={setDetail} />
-        </>
+          <Slider
+            images={images}
+            detail={detail}
+            setDetail={setDetail}
+            setShow={setShow}
+          />
+        </div>
       )}
       <Outlet />
-    </div>
+    </>
   );
 };
 

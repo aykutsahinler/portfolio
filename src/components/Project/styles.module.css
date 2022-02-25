@@ -1,0 +1,25 @@
+.mainContainer {
+  display    : flex;
+  margin-left: 300px;
+  width      : calc(100% - 300px);
+  overflow   : hidden;
+}
+
+.leftSide {
+  padding: 0 0 0 20px;
+  width  : 40%;
+  height : 100vh;
+}
+
+.rightSide {
+  width           : 60%;
+  height          : 100vh;
+  background-color: black;
+}
+
+@media screen and (max-width: 1400px) {
+  .mainContainer {
+    width      : calc(100% - 200px);
+    margin-left: 200px;
+  }
+}

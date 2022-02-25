@@ -1,9 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 
 import styles from "./styles.module.css";
 
 const Projects = () => {
+  const [show, setShow] = useState(true);
   const navigate = useNavigate();
 
   const location = window.location.pathname;
@@ -18,35 +19,39 @@ const Projects = () => {
   ];
 
   return (
-    <div className={styles.mainContainer}>
-      <div className={styles.projectContainer}>
-        <ul className={styles.projectList}>
-          {dataSource.map((item) => {
-            return (
-              <div key={item.id}>
-                <li
-                  onClick={() => navigate(`/projects/${item.endPoint}`)}
-                  key={item.id}
-                >
-                  {item.title}
-                </li>
-                <div
-                  key={Math.random()}
-                  className={[
-                    styles.line +
-                      " " +
-                      (location.includes(`/projects/${item.endPoint}`)
-                        ? styles.active
-                        : []),
-                  ].join("")}
-                ></div>
-              </div>
-            );
-          })}
-        </ul>
-      </div>
-      <Outlet />
-    </div>
+    <>
+      {show && (
+        <div className={styles.mainContainer}>
+          <div className={styles.projectContainer}>
+            <ul className={styles.projectList}>
+              {dataSource.map((item) => {
+                return (
+                  <div key={item.id}>
+                    <li
+                      onClick={() => navigate(`/projects/${item.endPoint}`)}
+                      key={item.id}
+                    >
+                      {item.title}
+                    </li>
+                    <div
+                      key={Math.random()}
+                      className={[
+                        styles.line +
+                          " " +
+                          (location.includes(`/projects/${item.endPoint}`)
+                            ? styles.active
+                            : []),
+                      ].join("")}
+                    ></div>
+                  </div>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      )}
+      <Outlet context={[show, setShow]} />
+    </>
   );
 };
 

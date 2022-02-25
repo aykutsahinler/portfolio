@@ -1,0 +1,42 @@
+.container {
+  margin-top: 2em;
+  height    : 100vh;
+  overflow-y: scroll;
+}
+
+.container h1 {
+  margin        : 0;
+  padding-bottom: 1em;
+}
+
+.contentContainer {
+  padding-top: 1em;
+}
+
+.contentText {
+  padding-bottom: 1em;
+  padding-top   : 1em;
+}
+
+.contentImage {
+  width     : calc(100% - 20px);
+  height    : 400px;
+  object-fit: cover;
+}
+
+.list {
+  list-style : none;
+  display    : flex;
+  align-items: center;
+}
+
+.list p {
+  font-size   : 1.3em;
+  font-weight : bold;
+  margin-right: 1em;
+}
+
+.list span {
+  font-size : 1.2em;
+  margin-top: 2px;
+}

@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 
 import styles from "./styles.module.css";
 
 const Projects = () => {
   const navigate = useNavigate();
+
+  const location = window.location.pathname;
+
+  useEffect(() => {}, [location]);
 
   const dataSource = [
     { id: 0, title: "Co-Founder of OPTIO", endPoint: "optio" },
@@ -18,12 +23,24 @@ const Projects = () => {
         <ul className={styles.projectList}>
           {dataSource.map((item) => {
             return (
-              <li
-                onClick={() => navigate(`/projects/${item.endPoint}`)}
-                key={item.id}
-              >
-                {item.title}
-              </li>
+              <>
+                <li
+                  onClick={() => navigate(`/projects/${item.endPoint}`)}
+                  key={item.id}
+                >
+                  {item.title}
+                </li>
+                <div
+                  key={item.id + 1}
+                  className={[
+                    styles.line +
+                      " " +
+                      (location === `/projects/${item.endPoint}`
+                        ? styles.active
+                        : []),
+                  ].join("")}
+                ></div>
+              </>
             );
           })}
         </ul>

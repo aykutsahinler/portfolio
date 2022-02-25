@@ -34,21 +34,16 @@
   padding       : 1rem 2.5rem;
 }
 
-.projectList li:hover {
-  left: 10px;
+.line {
+  width           : 50px;
+  margin-left     : 40px;
+  height          : 1px;
+  background-color: #000;
+  transition      : width .3s linear;
 }
 
-.projectList li::before {
-  content       : ">>";
-  position      : absolute;
-  left          : 1rem;
-  font-weight   : bold;
-  letter-spacing: -4px;
-  display       : none;
-}
-
-.projectList li:hover::before {
-  display: block;
+.active {
+  width: 100px;
 }
 
 @media screen and (max-width: 1400px) {

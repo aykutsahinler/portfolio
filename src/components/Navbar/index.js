@@ -42,7 +42,7 @@ const Navbar = () => {
               className={[
                 styles.line +
                   " " +
-                  (location === "/projects" ? styles.active : []),
+                  (location.includes("/projects") ? styles.active : []),
               ].join("")}
             ></div>
             <li onClick={() => navigate("/contact")}>Contact</li>

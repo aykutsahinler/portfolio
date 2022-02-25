@@ -35,7 +35,7 @@ const Projects = () => {
                   className={[
                     styles.line +
                       " " +
-                      (location === `/projects/${item.endPoint}`
+                      (location.includes(`/projects/${item.endPoint}`)
                         ? styles.active
                         : []),
                   ].join("")}

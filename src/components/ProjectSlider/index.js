@@ -3,8 +3,13 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
-const Slider = ({ images }) => {
+const Slider = ({ images, setDetail }) => {
   const navigate = useNavigate();
+
+  const onClickImage = (url) => {
+    navigate(url);
+    setDetail(true);
+  };
 
   return (
     <div className="slider-container">
@@ -15,7 +20,7 @@ const Slider = ({ images }) => {
               key={item.key}
               className="img-1"
               style={{ backgroundImage: `url(${item.image})` }}
-              onClick={() => navigate(item.to)}
+              onClick={() => onClickImage(item.to)}
             ></div>
           );
         })}

@@ -7,10 +7,10 @@ import Home from "./views/Home";
 import Resume from "./views/Resume";
 import Contact from "./views/Contact";
 import Projects from "./views/Projects";
+import Error from "./views/Error";
 
 import "./App.css";
-import Error from "./views/Error";
-import Detail from "./views/ProjectDetail";
+import Project from "./components/Project";
 
 const App = () => {
   let routes = useRoutes([
@@ -37,21 +37,49 @@ const App = () => {
               path: "freelence",
               key: "freelence",
               element: <Freelance />,
+              children: [
+                {
+                  path: "detail",
+                  key: "detail",
+                  element: <Project />,
+                },
+              ],
             },
             {
               path: "professional",
               key: "professional",
               element: <Architect />,
+              children: [
+                {
+                  path: "detail",
+                  key: "detail",
+                  element: <Project />,
+                },
+              ],
             },
             {
               path: "student",
               key: "student",
               element: <Student />,
+              children: [
+                {
+                  path: "detail",
+                  key: "detail",
+                  element: <Project />,
+                },
+              ],
             },
             {
               path: "optio",
               key: "optio",
               element: <Optio />,
+              children: [
+                {
+                  path: "detail",
+                  key: "detail",
+                  element: <Project />,
+                },
+              ],
             },
           ],
         },
@@ -59,11 +87,6 @@ const App = () => {
           path: "contact",
           key: "contact",
           element: <Contact />,
-        },
-        {
-          key: "detail",
-          path: "detail",
-          element: <Detail />,
         },
       ],
     },

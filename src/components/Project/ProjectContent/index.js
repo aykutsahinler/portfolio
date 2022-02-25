@@ -55,33 +55,15 @@ const ProjectContent = () => {
   ];
 
   const onScroll = () => {
-    let element = document.getElementById("aykut");
+    const element = document.getElementById("aykut");
     let height = element.scrollTop;
-    console.log(height);
 
-    switch (true) {
-      case height <= 600:
-        console.log("chapter 1");
-        break;
-      case 600 < height < 1050:
-        console.log("chapter 2");
-        break;
-      case 1500 <= height:
-        console.log("chapter 3");
-        break;
-      default:
-        console.log("aykut");
-        break;
-    }
-
-    if (height <= 600) {
+    if (height <= 900) {
       console.log("chapter 1");
-    } else if (600 < height < 1050) {
+    } else if (height > 600 && height <= 1800) {
       console.log("chapter 2");
-    } else if (1050 <= height) {
+    } else if (height > 1800) {
       console.log("chapter 3");
-    } else {
-      console.log("aykut");
     }
   };
 
@@ -104,23 +86,43 @@ const ProjectContent = () => {
         return (
           <div key={index} className={styles.contentContainer}>
             <p className={styles.contentText}>{chapter.chapter1.text1}</p>
-            <img src={chapter.chapter1.img1} className={styles.contentImage} />
+            <img
+              alt="imageDesc"
+              src={chapter.chapter1.img1}
+              className={styles.contentImage}
+            />
             <p className={styles.contentText}>{chapter.chapter1.text2}</p>
-            <img src={chapter.chapter1.img2} className={styles.contentImage} />
+            <img
+              alt="imageDesc"
+              src={chapter.chapter1.img2}
+              className={styles.contentImage}
+            />
             <p className={styles.contentText}>{chapter.chapter1.text3}</p>
             <br />
             <hr />
             <br />
             <p className={styles.contentText}>{chapter.chapter2.text1}</p>
-            <img src={chapter.chapter2.img1} className={styles.contentImage} />
+            <img
+              alt="imageDesc"
+              src={chapter.chapter2.img1}
+              className={styles.contentImage}
+            />
             <p className={styles.contentText}>{chapter.chapter2.text2}</p>
-            <img src={chapter.chapter2.img2} className={styles.contentImage} />
+            <img
+              alt="imageDesc"
+              src={chapter.chapter2.img2}
+              className={styles.contentImage}
+            />
             <p className={styles.contentText}>{chapter.chapter2.text3}</p>
             <br />
             <hr />
             <br />
             <p className={styles.contentText}>{chapter.chapter3.text1}</p>
-            <img src={chapter.chapter3.img1} className={styles.contentImage} />
+            <img
+              alt="imageDesc"
+              src={chapter.chapter3.img1}
+              className={styles.contentImage}
+            />
             <br />
             <br />
             <br />

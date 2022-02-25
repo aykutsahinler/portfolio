@@ -10,6 +10,7 @@ import Projects from "./views/Projects";
 
 import "./App.css";
 import Error from "./views/Error";
+import Detail from "./views/ProjectDetail";
 
 const App = () => {
   let routes = useRoutes([
@@ -58,6 +59,11 @@ const App = () => {
           path: "contact",
           key: "contact",
           element: <Contact />,
+        },
+        {
+          key: "detail",
+          path: "detail",
+          element: <Detail />,
         },
       ],
     },

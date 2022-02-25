@@ -1,17 +1,24 @@
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { useNavigate } from "react-router-dom";
 import "./styles.css";
 
-const Slider = () => {
+const Slider = ({ images }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="slider-container">
       <Carousel showThumbs={false} autoPlay>
-        <div className="img-1"></div>
-        <div className="img-2"></div>
-        <div className="img-3"></div>
-        <div className="img-4"></div>
-        <div className="img-5"></div>
-        <div className="img-6"></div>
+        {images.map((item) => {
+          return (
+            <div
+              key={item.key}
+              className="img-1"
+              style={{ backgroundImage: `url(${item.image})` }}
+              onClick={() => navigate(item.to)}
+            ></div>
+          );
+        })}
       </Carousel>
     </div>
   );

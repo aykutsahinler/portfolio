@@ -23,7 +23,7 @@ const Projects = () => {
         <ul className={styles.projectList}>
           {dataSource.map((item) => {
             return (
-              <>
+              <div key={item.id}>
                 <li
                   onClick={() => navigate(`/projects/${item.endPoint}`)}
                   key={item.id}
@@ -31,7 +31,7 @@ const Projects = () => {
                   {item.title}
                 </li>
                 <div
-                  key={item.id + 1}
+                  key={Math.random()}
                   className={[
                     styles.line +
                       " " +
@@ -40,7 +40,7 @@ const Projects = () => {
                         : []),
                   ].join("")}
                 ></div>
-              </>
+              </div>
             );
           })}
         </ul>

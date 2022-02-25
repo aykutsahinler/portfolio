@@ -8,46 +8,12 @@
 }
 
 .img-1 {
-  background         : url("../../assets/1.jpg");
+  cursor             : pointer;
   background-position: top;
   background-size    : cover;
   background-repeat  : no-repeat;
 }
 
-.img-2 {
-  background         : url("../../assets/2.jpg");
-  background-position: center;
-  background-size    : cover;
-  background-repeat  : no-repeat;
-}
-
-.img-3 {
-  background         : url("../../assets/3.jpg");
-  background-position: center;
-  background-size    : cover;
-  background-repeat  : no-repeat;
-}
-
-.img-4 {
-  background         : url("../../assets/4.jpg");
-  background-position: center;
-  background-size    : cover;
-  background-repeat  : no-repeat;
-}
-
-.img-5 {
-  background: url("../../assets/5.jpg");
-
-  background-size  : cover;
-  background-repeat: no-repeat;
-}
-
-.img-6 {
-  background         : url("../../assets/6.jpg");
-  background-position: top;
-  background-size    : cover;
-  background-repeat  : no-repeat;
-}
 
 @media screen and (max-width: 1572px) {
   .slider-container div {

@@ -6,15 +6,8 @@ import styles from "./styles.module.css";
 
 const Student = () => {
   const [detail, setDetail] = useState(false);
-  const [, setShow] = useOutletContext();
-
+  const [show, setShow] = useOutletContext();
   const location = window.location.pathname;
-
-  useEffect(() => {
-    if (location === "/projects/student") {
-      setDetail(false);
-    }
-  }, [location]);
 
   const dataSource = {
     title: "Student",
@@ -39,6 +32,13 @@ const Student = () => {
     },
   ];
 
+  useEffect(() => {
+    if (location === "/projects/student") {
+      setDetail(false);
+    }
+    location.includes("/detail") ? setDetail(true) : setDetail(false);
+  }, [location]);
+
   return (
     <>
       {!detail && (
@@ -51,6 +51,7 @@ const Student = () => {
             images={images}
             detail={detail}
             setDetail={setDetail}
+            show={show}
             setShow={setShow}
           />
         </div>

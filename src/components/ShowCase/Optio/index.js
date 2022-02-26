@@ -1,19 +1,13 @@
 import { useEffect, useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useOutletContext } from "react-router-dom";
 import { image4, image2, image3 } from "../../../assets/index";
 import Slider from "../../Slider";
 import styles from "./styles.module.css";
 
 const Optio = () => {
   const [detail, setDetail] = useState(false);
-
+  const [show, setShow] = useOutletContext();
   const location = window.location.pathname;
-
-  useEffect(() => {
-    if (location === "/projects/optio") {
-      setDetail(false);
-    }
-  }, [location]);
 
   const dataSource = {
     title: "OPTIO",
@@ -37,19 +31,33 @@ const Optio = () => {
       to: window.location.pathname + "/detail?project=3",
     },
   ];
+
+  useEffect(() => {
+    if (location === "/projects/optio") {
+      setDetail(false);
+    }
+    location.includes("/detail") ? setDetail(true) : setDetail(false);
+  }, [location]);
+
   return (
-    <div className={styles.mainContainer}>
+    <>
       {!detail && (
-        <>
+        <div className={styles.mainContainer}>
           <div className={styles.descriptionContainer}>
             <p>{dataSource.title}</p>
             <p>{dataSource.desc}</p>
           </div>
-          <Slider images={images} setDetail={setDetail} />
-        </>
+          <Slider
+            images={images}
+            detail={detail}
+            setDetail={setDetail}
+            show={show}
+            setShow={setShow}
+          />
+        </div>
       )}
       <Outlet />
-    </div>
+    </>
   );
 };
 

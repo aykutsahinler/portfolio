@@ -9,14 +9,16 @@ const Projects = () => {
 
   const location = window.location.pathname;
 
-  useEffect(() => {}, [location]);
-
   const dataSource = [
     { id: 0, title: "Co-Founder of OPTIO", endPoint: "optio" },
     { id: 1, title: "Freelance Designer", endPoint: "freelence" },
     { id: 2, title: "Professional Architect", endPoint: "professional" },
     { id: 3, title: "Student", endPoint: "student" },
   ];
+
+  useEffect(() => {
+    location.includes("/detail") ? setShow(false) : setShow(true);
+  }, [location, show]);
 
   return (
     <>

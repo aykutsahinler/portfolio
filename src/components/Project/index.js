@@ -8,7 +8,7 @@ const Project = () => {
   const [currImage, setCurrImage] = useState(false);
   const [height, setHeight] = useState(0);
 
-  const images = [
+  let images = [
     {
       key: 0,
       image: image4,
@@ -31,7 +31,7 @@ const Project = () => {
     } else if (height > 1700) {
       setCurrImage(images[2].image);
     }
-  }, [height]);
+  }, [height, images]);
 
   return (
     <div className={styles.mainContainer}>

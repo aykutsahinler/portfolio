@@ -6,7 +6,7 @@ import styles from "./styles.module.css";
 
 const Student = () => {
   const [detail, setDetail] = useState(false);
-  const [show, setShow] = useOutletContext();
+  const [, setShow] = useOutletContext();
 
   const location = window.location.pathname;
 

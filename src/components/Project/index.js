@@ -2,13 +2,14 @@ import DetailSlider from "./DetailSlider";
 import ProjectContent from "./ProjectContent";
 import styles from "./styles.module.css";
 import { image4, image5, image6 } from "../../assets";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Project = () => {
   const [currImage, setCurrImage] = useState(false);
   const [height, setHeight] = useState(0);
+  let images = useRef([]);
 
-  let images = [
+  images = [
     {
       key: 0,
       image: image4,

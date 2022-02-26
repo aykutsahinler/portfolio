@@ -1,7 +1,7 @@
 import styles from "./styles.module.css";
 import { image1, image2, image3, image4, image5 } from "../../../assets";
 
-const ProjectContent = () => {
+const ProjectContent = ({ setHeight }) => {
   const projectTitleDataSource = [
     {
       key: 0,
@@ -56,15 +56,7 @@ const ProjectContent = () => {
 
   const onScroll = () => {
     const element = document.getElementById("aykut");
-    let height = element.scrollTop;
-
-    if (height <= 900) {
-      console.log("chapter 1");
-    } else if (height > 600 && height <= 1800) {
-      console.log("chapter 2");
-    } else if (height > 1800) {
-      console.log("chapter 3");
-    }
+    setHeight(element.scrollTop);
   };
 
   return (
@@ -88,12 +80,14 @@ const ProjectContent = () => {
             <p className={styles.contentText}>{chapter.chapter1.text1}</p>
             <img
               alt="imageDesc"
+              loading="lazy"
               src={chapter.chapter1.img1}
               className={styles.contentImage}
             />
             <p className={styles.contentText}>{chapter.chapter1.text2}</p>
             <img
               alt="imageDesc"
+              loading="lazy"
               src={chapter.chapter1.img2}
               className={styles.contentImage}
             />
@@ -104,12 +98,14 @@ const ProjectContent = () => {
             <p className={styles.contentText}>{chapter.chapter2.text1}</p>
             <img
               alt="imageDesc"
+              loading="lazy"
               src={chapter.chapter2.img1}
               className={styles.contentImage}
             />
             <p className={styles.contentText}>{chapter.chapter2.text2}</p>
             <img
               alt="imageDesc"
+              loading="lazy"
               src={chapter.chapter2.img2}
               className={styles.contentImage}
             />
@@ -120,6 +116,7 @@ const ProjectContent = () => {
             <p className={styles.contentText}>{chapter.chapter3.text1}</p>
             <img
               alt="imageDesc"
+              loading="lazy"
               src={chapter.chapter3.img1}
               className={styles.contentImage}
             />

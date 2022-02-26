@@ -14,6 +14,12 @@ const Architect = () => {
     desc: "2 yıl boyunca Kubilay Şahinler farklı firmalar    için freelance tasarımcı    oldu. Aynı zamanda kimi    mimari tasarım yarışmalarına katıldı.",
   };
 
+  const projectDataSource = {
+    year: 2020,
+    name: "OPTIO",
+    area: "OPTIO",
+  };
+
   const images = [
     {
       key: 0,
@@ -56,7 +62,7 @@ const Architect = () => {
           />
         </div>
       )}
-      <Outlet />
+      <Outlet context={projectDataSource} />
     </>
   );
 };

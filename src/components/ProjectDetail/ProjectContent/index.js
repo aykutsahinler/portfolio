@@ -1,22 +1,22 @@
 import styles from "./styles.module.css";
 import { image1, image2, image3, image4, image5 } from "../../../assets";
 
-const ProjectContent = ({ setHeight }) => {
+const ProjectContent = ({ setHeight, titleDataSource }) => {
   const projectTitleDataSource = [
     {
       key: 0,
       title: "Name:",
-      value: "OPTIO",
+      value: titleDataSource.name,
     },
     {
       key: 1,
       title: "Year:",
-      value: "2020",
+      value: titleDataSource.year,
     },
     {
       key: 2,
       title: "Area:",
-      value: "Building",
+      value: titleDataSource.area,
     },
   ];
   const dataSource = [

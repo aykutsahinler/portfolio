@@ -1,7 +1,7 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./styles.css";
 
-const DetailSlider = ({ image }) => {
+const DetailImage = ({ image }) => {
   return (
     <div>
       <img alt="imageDesc" loading="lazy" src={image} className="image" />
@@ -9,4 +9,4 @@ const DetailSlider = ({ image }) => {
   );
 };
 
-export default DetailSlider;
+export default DetailImage;

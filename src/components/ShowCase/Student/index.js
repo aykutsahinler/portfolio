@@ -32,6 +32,12 @@ const Student = () => {
     },
   ];
 
+  const projectDataSource = {
+    year: 2020,
+    name: "Student",
+    area: "Student",
+  };
+
   useEffect(() => {
     if (location === "/projects/student") {
       setDetail(false);
@@ -56,7 +62,7 @@ const Student = () => {
           />
         </div>
       )}
-      <Outlet />
+      <Outlet context={projectDataSource} />
     </>
   );
 };

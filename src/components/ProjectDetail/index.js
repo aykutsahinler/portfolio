@@ -1,12 +1,14 @@
-import DetailSlider from "./DetailSlider";
+import DetailImage from "./DetailImage";
 import ProjectContent from "./ProjectContent";
 import styles from "./styles.module.css";
 import { image4, image5, image6 } from "../../assets";
 import { useEffect, useRef, useState } from "react";
+import { useOutletContext } from "react-router-dom";
 
 const Project = () => {
   const [currImage, setCurrImage] = useState(false);
   const [height, setHeight] = useState(0);
+  const dataSource = useOutletContext();
   let images = useRef([]);
 
   images = [
@@ -38,11 +40,11 @@ const Project = () => {
     <div className={styles.mainContainer}>
       <div className={styles.leftSide}>
         <div className={styles.leftSideContent}>
-          <ProjectContent setHeight={setHeight} />
+          <ProjectContent setHeight={setHeight} titleDataSource={dataSource} />
         </div>
       </div>
       <div className={styles.rightSide}>
-        <DetailSlider image={currImage} />
+        <DetailImage image={currImage} />
       </div>
     </div>
   );

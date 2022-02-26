@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import { image1, image2, image3 } from "../../../assets/index";
-import Slider from "../../ProjectSlider";
+import Slider from "../../Slider";
 import styles from "./styles.module.css";
 
 const Freelance = () => {

@@ -19,7 +19,7 @@ const Slider = ({ images, detail, setDetail, setShow }) => {
           return (
             <div
               key={item.key}
-              className="img-1"
+              className="img"
               style={{ backgroundImage: `url(${item.image})` }}
               onClick={() => onClickImage(item.to)}
             ></div>

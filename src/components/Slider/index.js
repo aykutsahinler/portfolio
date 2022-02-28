@@ -14,7 +14,7 @@ const Slider = ({ images, setDetail, setShow }) => {
 
   return (
     <div className="slider-container">
-      <Carousel showThumbs={false} autoPlay>
+      <Carousel showThumbs={false} autoPlay infiniteLoop>
         {images.map((item) => {
           return (
             <div

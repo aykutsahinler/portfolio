@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
-import Slider from "../../Slider";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./styles.css";
 
@@ -10,7 +9,7 @@ const DetailImage = ({ index, images }) => {
   return (
     <div className="mainContainer">
       <div className="slider-container1">
-        <Carousel showThumbs={false} autoPlay>
+        <Carousel showThumbs={false} autoPlay infiniteLoop>
           {images[index].images.map((item) => {
             return (
               <div

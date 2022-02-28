@@ -1,12 +1,12 @@
 import DetailImage from "./DetailImage";
 import ProjectContent from "./ProjectContent";
 import styles from "./styles.module.css";
-import { image4, image5, image6 } from "../../assets";
+import { image1, image3, image2, image4, image5, image6 } from "../../assets";
 import { useEffect, useRef, useState } from "react";
 import { useOutletContext } from "react-router-dom";
 
 const Project = () => {
-  const [currImage, setCurrImage] = useState(false);
+  const [currImage, setCurrImage] = useState(0);
   const [height, setHeight] = useState(0);
   const dataSource = useOutletContext();
   let images = useRef([]);
@@ -14,27 +14,78 @@ const Project = () => {
   images = [
     {
       key: 0,
-      image: image4,
+      images: [
+        {
+          key: 0,
+          image: image1,
+        },
+        {
+          key: 1,
+          image: image2,
+        },
+        {
+          key: 2,
+          image: image3,
+        },
+        {
+          key: 3,
+          image: image4,
+        },
+      ],
     },
     {
       key: 1,
-      image: image5,
+      images: [
+        {
+          key: 0,
+          image: image4,
+        },
+        {
+          key: 1,
+          image: image3,
+        },
+        {
+          key: 2,
+          image: image2,
+        },
+        {
+          key: 3,
+          image: image1,
+        },
+      ],
     },
     {
       key: 2,
-      image: image6,
+      images: [
+        {
+          key: 0,
+          image: image1,
+        },
+        {
+          key: 1,
+          image: image2,
+        },
+        {
+          key: 2,
+          image: image3,
+        },
+        {
+          key: 3,
+          image: image4,
+        },
+      ],
     },
   ];
 
   useEffect(() => {
     if (height <= 800) {
-      setCurrImage(images[0].image);
+      setCurrImage(0);
     } else if (height > 600 && height <= 1800) {
-      setCurrImage(images[1].image);
+      setCurrImage(1);
     } else if (height > 1700) {
-      setCurrImage(images[2].image);
+      setCurrImage(2);
     }
-  }, [height, images]);
+  }, [height, currImage]);
 
   return (
     <div className={styles.mainContainer}>
@@ -44,7 +95,7 @@ const Project = () => {
         </div>
       </div>
       <div className={styles.rightSide}>
-        <DetailImage image={currImage} />
+        <DetailImage index={currImage} images={images} />
       </div>
     </div>
   );

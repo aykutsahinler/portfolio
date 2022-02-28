@@ -1,10 +1,18 @@
-.image {
-  width     : 100%;
-  height    : 100vh;
-  object-fit: cover;
+.slider-container1 {
+  width : 100%;
+  height: 100vh;
 }
 
+.slider-container1 div {
+  height: 100vh;
+}
 
+.img1 {
+  background-position: top;
+  background-size    : cover;
+  background-repeat  : no-repeat;
+  position           : relative;
+}
 
 .close-container {
   position: absolute;

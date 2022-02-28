@@ -1,16 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { Carousel } from "react-responsive-carousel";
+import Slider from "../../Slider";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./styles.css";
-import Slider from "../../Slider";
-import { useEffect } from "react";
 
 const DetailImage = ({ index, images }) => {
   const navigate = useNavigate();
-
-  useEffect(() => {
-    console.log(images[index].images);
-  }, [images, index]);
 
   return (
     <div className="mainContainer">
